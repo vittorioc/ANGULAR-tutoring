@@ -1,0 +1,40 @@
+<div class="container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+      <div class="col-1 d-flex flex-row-reverse">
+        <label for="name">User: </label>
+      </div>
+      <div class="col-6">
+        <input id="name" type="text" formControlName="userName">
+      </div>
+      <div class="col-2">
+        <p>{{loginForm.value['userName']}}</p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-1 d-flex flex-row-reverse">
+        <label for="password">Password: </label>
+      </div>
+      <div class="col-6">
+        <input id="password" type="password" formControlName="userPassword">
+      </div>
+      <div class="col-2">
+        <p>{{loginForm.controls['userPassword'].value}}</p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+      </div>
+    </div>
+
+  </form>
+</div>
