@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   constructor(private logger: NGXLogger) {
     this.logger.trace('HeaderComponent');
 
-    this.title = 'Gestionale Azienda';
+    this.title = 'Company Management';
     this.logger.trace('this.title:', this.title);
   }
 
